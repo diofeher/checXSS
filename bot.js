@@ -29,10 +29,8 @@ function pwn(payload) {
   })(payload);
 }
 
-fs.readFile('pay_sml.txt', 'utf-8', function(err, contents) {
+fs.readFile('payloads.txt', 'utf-8', function(err, contents) {
   for(var payload of contents.split(/\r\n|\r|\n/)) {
     pwn(payload);
   };
 });
-
-  
